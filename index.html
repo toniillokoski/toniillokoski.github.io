@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fi">
+  <head>
+    <title>Sivupohja</title>
+	<meta charset="UTF-8">
+	
+	
+					<!-- Hotjar Tracking Code for http://protoni.hayo.fi/~tillokos/testi/hotjartesti.html -->
+				<script>
+					(function(h,o,t,j,a,r){
+						h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+						h._hjSettings={hjid:2111736,hjsv:6};
+						a=o.getElementsByTagName('head')[0];
+						r=o.createElement('script');r.async=1;
+						r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+						a.appendChild(r);
+					})(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+				</script>
+
+	<style>
+        * {
+  margin: 0;
+  padding: 0;  
+}
+
+body {
+	font-family: sans-serif;	
+	color: #fff;
+}
+
+.sivu {
+	height: 100vh;
+}
+
+.sivu, #footer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;	
+}
+
+#navigointi {
+	background-color: rgba(0,0,0,0.7);
+	position: fixed;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1em;
+	box-sizing: border-box;
+}
+
+#navigointi a {
+	color: #fff;
+	text-decoration: none;
+	padding: 0 1em;
+}
+
+#navigointi a:hover {
+	color: #FFEBEE;
+}
+
+#navigointi ul {
+	display: flex;
+}
+
+#navigointi ul li {
+	display: block;
+}
+
+#etusivu {
+	background-color: #F44336;
+}
+
+#yritys {
+	background-color: #E91E63;
+}
+
+#tuotteet {
+	background-color: #9C27B0;
+}
+
+#yhteystiedot {
+	background-color: #673AB7;
+}
+
+#footer {
+	background-color: #3F51B5;
+	height: 5em;
+}
+</style>
+  </head>
+  <body>
+    <div id="sivusto">
+	  <div id="navigointi">
+	    <h1><a href="#etusivu">YRITYS OY</a></h1>
+		<ul>
+		  <li><a href="#yritys">Yritys</a></li>
+		  <li><a href="#tuotteet">Tuotteet</a></li>
+		  <li><a href="#yhteystiedot">Yhteystiedot</a></li>
+		</ul>
+	  </div>
+	  <div id="etusivu" class="sivu"> 
+        <h1>Sivun otsikko</h1>
+	    <p>Tämä on sivun todella laadukasta sisältöä, jossa esitellään todella napakasti ja siististi kotisivujen pääsisältö.</p>
+	  </div>
+	  <div id="yritys" class="sivu">
+	    <h1>Yritys</h1>
+		<p>Tällä sivulla on yrityksen esittely.</p>
+	  </div>
+	  <div id="tuotteet" class="sivu">
+        <h1>Tuotteet</h1>
+	    <p>Tällä sivulla on esittely yrityksen tuotteista.</p>	  
+	  </div>
+	  <div id="yhteystiedot" class="sivu">
+	    <h1>Yhteystiedot</h1>
+		<p>Tällä sivulla on yrityksen yhteystiedot</p>
+	  </div>
+	  <div id="footer">
+	    <p>Tässä on vielä sivuston sisällöstä riippuen tarpeellista perustietoa, kuten esimerkiksi linkki tietosuojaselosteeseen.</p>
+	  </div>
+	</div>
+  </body>
+</html>
