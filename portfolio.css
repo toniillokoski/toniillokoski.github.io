@@ -44,7 +44,7 @@ section{
 }
 
 .section-2 img {
-    height: 250px;
+    height: 400px;
 }
 
 a.nav-item {
@@ -74,7 +74,7 @@ a.nav-item:hover {
 
 .project-figure {
 	margin: 0 auto 1rem auto;
-	max-height: 256px;
+	max-height: 512px;
 	max-width: 256px;
 }
 
