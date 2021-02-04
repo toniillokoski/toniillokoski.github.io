@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Toni Illokoski testi</title>
+
+
+        <!-- css files -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.3.1/css/bulma.min.css">
+		<link rel="stylesheet" type="text/css" href="/testit.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@animxyz/core@0.4.0/dist/animxyz.min.css">
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+	<body>
+		<!-- Navbar -->
+			<nav class="nav container void-background">
+				<div class="nav-left">
+					<a href="index.html" class="nav-item">
+						<span class="icon">
+							<i class="fa fa-home"></i>
+						</span>
+					</a>
+					<a href="https://github.com/toniillokoski" class="nav-item">
+						<span class="icon">
+							<i class="fa fa-github"></i>
+						</span>
+					</a>
+					<a href="https://www.linkedin.com/in/toni-illokoski-670517192/" class="nav-item">
+						<span class="icon">
+							<i class="fa fa-linkedin"></i>
+						</span>
+					</a>			
+				</div>
+            </nav>
+
+<!-- Calculator -->
+    <h2>Laskin</h2>
+    <div class="calculatortest">
+        <form class="calculator" name="calc">
+            <input class="value" type="text" name="txt" readonly="">
+            <span class="num clear" onclick="document.calc.txt.value =''">C</span>
+            <span class="num" onclick="document.calc.txt.value +='/'">/</span>
+            <span class="num" onclick="document.calc.txt.value +='*'">*</span>
+            <span class="num" onclick="document.calc.txt.value +='7'">7</span>
+            <span class="num" onclick="document.calc.txt.value +='8'">8</span>
+            <span class="num" onclick="document.calc.txt.value +='9'">9</span>
+            <span class="num" onclick="document.calc.txt.value +='-'">-</span>
+            <span class="num" onclick="document.calc.txt.value +='4'">4</span>
+            <span class="num" onclick="document.calc.txt.value +='5'">5</span>
+            <span class="num" onclick="document.calc.txt.value +='6'">6</span>
+            <span class="num plus" onclick="document.calc.txt.value +='+'">+</span>
+            <span class="num" onclick="document.calc.txt.value +='3'">3</span>
+            <span class="num" onclick="document.calc.txt.value +='2'">2</span>
+            <span class="num" onclick="document.calc.txt.value +='1'">1</span>
+            <span class="num" onclick="document.calc.txt.value +='0'">0</span>
+            <span class="num" onclick="document.calc.txt.value +='00'">00</span>
+            <span class="num" onclick="document.calc.txt.value +=','">,</span>
+            <span class="num equal" onclick="document.calc.txt.value = eval(calc.txt.value)">=</span>
+        </form>
+    </div>
+<!-- Calculator ends -->
+
+<hr>
+
+<!-- Imageslider -->
+    <h2>Kuvakaruselli</h2>
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 3</div>
+                    <img src="/testimateriaali/pic1.JPG" style="width:100%">
+                <div class="text">Esimerkkikuva 1</div>
+            </div>
+            
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 3</div>
+                    <img src="/testimateriaali/pic2.jpg" style="width:100%">
+                <div class="text">Esimerkkikuva 2</div>
+            </div>
+            
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                    <img src="/testimateriaali/pic3.JPG" style="width:100%">
+                <div class="text">Esimerkkikuva 3</div>
+            </div>
+            
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            
+        </div>
+
+            <br>
+            
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span> 
+                <span class="dot" onclick="currentSlide(2)"></span> 
+                <span class="dot" onclick="currentSlide(3)"></span> 
+            </div>
+            
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}    
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";  
+            dots[slideIndex-1].className += " active";
+        }
+    </script>
+<!-- Imageslider ends -->
+
+<hr>
+
+<!-- Loader RGB -->
+    <h2>Loading...</h2>
+    <div class="loader-container">
+        <div class="loader">
+            <span></span>
+        </div>
+    </div>
+<!-- Loader RGB ends -->
+
+<hr>
+
+<!-- BPM counter -->
+    <h2>BPM-laskuri</h2>
+    <div class="bpmcounter">
+        <div>
+            <span id="time">0</span>
+        </div>
+        <br/>
+        <div>
+            <input id="tempo" type="text" />
+            <br>
+            Beats per minute
+        </div>
+        <br>
+        <br>
+        <div>
+            <button id="btn">TAP</button>
+        </div>
+            
+        <script>
+            var btn = document.getElementById('btn');
+            var time = document.getElementById('time');
+            var tempo = document.getElementById('tempo');
+            var counter = 0, clearTimer, start, delta;
+
+            var count = function(){
+                clearTimeout(clearTimer);
+                
+                if(!start) {
+                    start = new Date().getTime();
+                } else {
+                    delta = new Date().getTime() - start;
+                    time.innerText = delta/1000;
+                    tempo.value = Math.round(60 * 1000 * counter / delta);
+                    
+                }
+                counter++;
+                
+                // Reset
+                clearTimer = setTimeout(function(){
+                    counter = 0;
+                    delta = 0;
+                    start = 0;
+                    time.innerText = '0';
+                    tempo.value = '';
+                }, 5000);
+            };
+
+            btn.addEventListener('click', count);
+        </script>
+
+    </div>
+<!-- BPM counter ends -->
+
+<hr>
+
+	</body>	
+</html>
