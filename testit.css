@@ -77,7 +77,6 @@ h2 {
     outline: none;
     padding: 10px;
     font-size: 18px;
-
 }
 
 .calculator .num {
@@ -251,9 +250,7 @@ h2 {
     }
 }
 
-/* BPM COUNTER */
-
-
+/* BPM COUNTER CSS */
 .bpmcounter {
     display: flex;
     justify-content: center;
@@ -327,5 +324,4 @@ h2 {
     color: #14ffe9;
     border: 2px solid #14ffe9;
     background-color: #063647;
-    
 }
