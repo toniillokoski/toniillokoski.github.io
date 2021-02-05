@@ -24,11 +24,11 @@ html, body{
 }
 
 a {
-  color: #ff9500;
+  color: #00bbff;
 }
 
 a:hover {
-  color: #c57300;
+  color: #eeeded;
 }
 
 h1 {
@@ -48,7 +48,7 @@ section{
 }
 
 a.nav-item {
-    color: #dfdfdf;
+    color: #eeeded;
 }
 
 a.nav-item:hover {
@@ -84,11 +84,11 @@ a.nav-item:hover {
 
 .box {
 	background-color: transparent;
-	border: 2px solid rgba(16, 91, 121, 0.5);
+	border: 2px solid #176f8f;
 }
 
 .title {
-	color: #fff;
+	color: #eeeded;
 	text-align: left;
 	margin-bottom: 2rem;
 }
@@ -100,7 +100,7 @@ a.nav-item:hover {
 }
 
 .icon {
-    color:white;
+    color: #eeeded;
 }
 
 .void-background {
@@ -147,11 +147,10 @@ li {
     display: inline-block;
     margin: 7px;
     padding: 5px 10px;
-    color: #374054;
+    color: #042834;
     background: #e4e4ea;
     list-style: none;
     cursor: default;
-    font-size: 1.2em
 }
 
 #info {
@@ -159,3 +158,69 @@ li {
 	padding-bottom: 3rem;
 }
 
+/* CONTACT FORM */
+
+.feedback-input {
+    color: #eeeded;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight:500;
+    border-radius: 5px;
+    line-height: 22px;
+    background-color: transparent;
+    border:2px solid #176f8f;
+    transition: all 0.3s;
+    padding: 13px;
+    margin-bottom: 15px;
+    width:100%;
+    box-sizing: border-box;
+    outline:0;
+}
+  
+.feedback-input:focus {
+    border:2px solid #00bbff;
+}
+  
+textarea {
+    height: 150px;
+    line-height: 150%;
+    resize:vertical;
+}
+  
+[type="submit"] {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    width: 100%;
+    background:#176f8f;
+    border-radius:5px;
+    border:0;
+    cursor:pointer;
+    font-size: 16px;
+    color:#eeeded;
+    padding-top:10px;
+    padding-bottom:10px;
+    transition: all 0.3s;
+    margin-top:-4px;
+    font-weight:700;
+}
+
+[type="submit"]:hover {
+    background:#00bbff;
+}
+
+.orelse {
+    text-align: center;
+    font-weight: bolder;
+}
+
+.othercontact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom: 5rem;
+    color: #eeeded;
+}
+
+.othercontact img {
+    position: relative;
+    top: 15px;
+}
