@@ -162,7 +162,6 @@ li {
 
 .feedback-input {
     color: #eeeded;
-    font-family: Helvetica, Arial, sans-serif;
     font-weight:500;
     border-radius: 5px;
     line-height: 22px;
@@ -174,6 +173,10 @@ li {
     width:100%;
     box-sizing: border-box;
     outline:0;
+}
+
+@media screen and (max-width: 900px) {
+
 }
   
 .feedback-input:focus {
