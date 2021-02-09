@@ -10,7 +10,6 @@
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@animxyz/core@0.4.0/dist/animxyz.min.css">
 		
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
 
     </head>
 
@@ -255,40 +254,45 @@
 <!-- CHROME? -->
 
 <h2>Chrome?</h2>
-
-<div class="game">
-    <div id="character"></div>
-    <div id="block"></div>
+<div class="chrome" onclick="jump()">
+    <div class="game">
+        <div id="character"></div>
+        <div id="block"></div>
+    </div>
 </div>
 
 <p>Score: <span id="scoreSpan"></span></p>
 
 <script>
-var character = document.getElementById("character");
-var block = document.getElementById("block");
-var pointcounter=0;
-function jump(){
-    if(character.classList == "animate"){return}
-    character.classList.add("animate");
-    setTimeout(function(){
-        character.classList.remove("animate");
-    },300);
-}
-var checkDead = setInterval(function() {
-    let characterTop = parseInt(window.getComputedStyle(character).getPropertyValue("top"));
-    let blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue("left"));
-    if(blockLeft<20 && blockLeft>-20 && characterTop>=130){
-        block.style.animation = "none";
-//      alert("Game Over. score: "+Math.floor(pointcounter/100));
-        pointcounter=0;
-        block.style.animation = "block 1s infinite linear";
-    }else{
-        pointcounter++;
-        document.getElementById("scoreSpan").innerHTML = Math.floor(pointcounter/100);
+    var character = document.getElementById("character");
+    var block = document.getElementById("block");
+    var pointcounter=0;
+
+    function jump() {
+        if(character.classList == "animate"){return}
+        character.classList.add("animate");
+        setTimeout(function(){
+            character.classList.remove("animate");
+        },300);
+        }
+
+    var checkDead = setInterval(function() {
+        let characterTop = parseInt(window.getComputedStyle(character).getPropertyValue("top"));
+        let blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue("left"));
+        if (blockLeft<20 && blockLeft>-20 && characterTop>=130){
+            block.style.animation = "none";
+            pointcounter=0;
+            block.style.animation = "block 1s infinite linear";
+        } else {
+            pointcounter++;
+            document.getElementById("scoreSpan").innerHTML = Math.floor(pointcounter/100);
     }
-}, 10);
+    }, 10);
 </script>
 
+<!-- CHROME? ENDS -->
+
+<hr>
 
 
 	</body>	

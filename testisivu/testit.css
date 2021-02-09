@@ -579,10 +579,11 @@ height: 100%;
 }
 #character{
   width: 20px;
-  height: 50px;
-  background-color: red;
+  height: 25px;
   position:relative;
-  top: 150px;
+  top: 172px;
+  left: 20px;
+  background-color: #ffeb3b;
 }
 .animate{
   animation: jump 0.3s linear;
@@ -595,13 +596,14 @@ height: 100%;
 }
 
 #block{
-  background-color: blue;
+  background-color: rgb(255, 255, 255);
   width: 20px;
   height: 20px;
   position: relative;
-  top: 130px;
+  top: 150px;
   left: 500px;
   animation: block 1s infinite linear;
+  border-radius: 5%;
 }
 @keyframes block{
   0%{left: 500px}
@@ -609,4 +611,5 @@ height: 100%;
 }
 p{
   text-align: center;
+  margin-top: 1rem;
 }
