@@ -36,7 +36,8 @@
 				</div>
             </nav>
 
-<!-- Calculator -->
+<!-- CALCULATOR -->
+
     <h2>Laskin</h2>
 
     <div class="calculatortest">
@@ -62,11 +63,13 @@
             <span class="num equal" onclick="document.calc.txt.value = eval(calc.txt.value)">=</span>
         </form>
     </div>
-<!-- Calculator ends -->
+
+<!-- CALCULATOR ENDS -->
 
 <hr>
 
-<!-- Imageslider -->
+<!-- IMAGESLIDER -->
+
     <h2>Kuvakaruselli</h2>
 
         <div class="slideshow-container">
@@ -130,11 +133,13 @@
             dots[slideIndex-1].className += " active";
         }
     </script>
-<!-- Imageslider ends -->
+
+<!-- IMAGESLIDER ENDS -->
 
 <hr>
 
-<!-- Loader RGB -->
+<!-- LOADER RGB -->
+
     <h2>Loading...</h2>
 
     <div class="loader-container">
@@ -142,11 +147,13 @@
             <span></span>
         </div>
     </div>
-<!-- Loader RGB ends -->
+
+<!-- LOADER RGB ENDS -->
 
 <hr>
 
-<!-- BPM counter -->
+<!-- BPM COUNTER -->
+
     <h2>BPM-laskuri</h2>
 
     <div class="bpmcounter">
@@ -198,7 +205,8 @@
         </script>
 
     </div>
-<!-- BPM counter ends -->
+
+<!-- BPM COUNTER ENDS -->
 
 <hr>
 
@@ -217,6 +225,71 @@
         <div class="text-wrapper">Testi &mdash; Testi &mdash; Testi &mdash; Testi &dash; Testi &mdash; Testi &mdash; Testi &mdash; Testi</div>
     </div>
 </div>
+
+<!-- PEEK LAMP ENDS -->
+
+<hr>
+
+<!-- DARK MODE -->
+
+<H2>Darkmode/Lightmode</H2>
+
+<div id="darkcontainer">
+    <div id="change" class="dark">
+        <button id="btn2" class="toggleClass" onclick="toggleClass()">SWITCH</button>
+    </div>
+</div>
+
+<script type="text/javascript">
+    function toggleClass()
+    {
+        const body = document.querySelector('change');
+        change.classList.toggle('light');
+    }
+</script>
+
+<!-- DARK MODE ENDS -->
+
+<hr>
+
+<!-- CHROME? -->
+
+<h2>Chrome?</h2>
+
+<div class="game">
+    <div id="character"></div>
+    <div id="block"></div>
+</div>
+
+<p>Score: <span id="scoreSpan"></span></p>
+
+<script>
+var character = document.getElementById("character");
+var block = document.getElementById("block");
+var pointcounter=0;
+function jump(){
+    if(character.classList == "animate"){return}
+    character.classList.add("animate");
+    setTimeout(function(){
+        character.classList.remove("animate");
+    },300);
+}
+var checkDead = setInterval(function() {
+    let characterTop = parseInt(window.getComputedStyle(character).getPropertyValue("top"));
+    let blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue("left"));
+    if(blockLeft<20 && blockLeft>-20 && characterTop>=130){
+        block.style.animation = "none";
+//      alert("Game Over. score: "+Math.floor(pointcounter/100));
+        pointcounter=0;
+        block.style.animation = "block 1s infinite linear";
+    }else{
+        pointcounter++;
+        document.getElementById("scoreSpan").innerHTML = Math.floor(pointcounter/100);
+    }
+}, 10);
+</script>
+
+
 
 	</body>	
 </html>

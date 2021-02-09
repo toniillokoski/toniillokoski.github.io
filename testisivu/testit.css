@@ -438,3 +438,175 @@ h2 {
   .card-container:hover .text-wrapper {
     opacity: 1;
   }
+
+  /* DARK MODE CSS */
+
+  #darkcontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  } 
+
+  .dark {
+    width: 100vw;
+    height: 30vh;
+    background: #04202b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem;
+  }
+
+  .light {
+    width: 100vw;
+    height: 30vh;
+    background: #129acb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem;
+  }
+
+  .dark #btn2 {
+
+    position: relative;
+    padding: 20px;
+    margin: 0 15px;
+    color: #14ffe9;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 30px;
+    transition: 0.5s;
+    background: #04202b;
+    border: none;
+    letter-spacing: 6px;
+    font-weight: bolder;
+}
+
+.dark #btn2:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid #14ffe9;
+  border-left: 2px solid #14ffe9;
+  transition: 0.3s;
+}
+
+.dark #btn2:hover:before {
+  width: 100%;
+  height: 100%;
+}
+
+.dark #btn2:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  border-bottom: 2px solid #14ffe9;
+  border-right: 2px solid #14ffe9;
+  transition: 0.3s;
+}
+
+.dark #btn2:hover:after {
+  width: 100%;
+  height: 100%;
+}
+
+.light #btn2 {
+
+  position: relative;
+  padding: 20px;
+  margin: 0 15px;
+  color: #063647;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 30px;
+  transition: 0.5s;
+  background: #129acb;
+  border: none;
+  letter-spacing: 6px;
+  font-weight: bolder;
+}
+
+.light #btn2:before {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 10px;
+height: 10px;
+border-top: 2px solid #063647;
+border-left: 2px solid #063647;
+transition: 0.3s;
+}
+
+.light #btn2:hover:before {
+width: 100%;
+height: 100%;
+}
+
+.light #btn2:after {
+content: '';
+position: absolute;
+bottom: 0;
+right: 0;
+width: 10px;
+height: 10px;
+border-bottom: 2px solid #063647;
+border-right: 2px solid #063647;
+transition: 0.3s;
+}
+
+.light #btn2:hover:after {
+width: 100%;
+height: 100%;
+}
+
+/* CHROME? CSS */
+
+.game{
+  width: 500px;
+  height: 200px;
+  border: 1px solid black;
+  margin: auto;
+}
+#character{
+  width: 20px;
+  height: 50px;
+  background-color: red;
+  position:relative;
+  top: 150px;
+}
+.animate{
+  animation: jump 0.3s linear;
+}
+@keyframes jump{
+  0%{top: 150px;}
+  30%{top: 100px;}
+  70%{top: 100px;}
+  100%{top: 150px;}
+}
+
+#block{
+  background-color: blue;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  top: 130px;
+  left: 500px;
+  animation: block 1s infinite linear;
+}
+@keyframes block{
+  0%{left: 500px}
+  100%{left: -20px}
+}
+p{
+  text-align: center;
+}
