@@ -384,7 +384,7 @@ h2 {
   }
   
   .card-container:hover {
-    background: #000;
+    background: #14ffe9;
     color: #fff;
     transition: all 0.2s ease-out;
   }
@@ -583,7 +583,7 @@ height: 100%;
   position:relative;
   top: 172px;
   left: 20px;
-  background-color: #ffeb3b;
+  background-color: #14ffe9;
 }
 .animate{
   animation: jump 0.3s linear;
@@ -612,4 +612,11 @@ height: 100%;
 p{
   text-align: center;
   margin-top: 1rem;
+}
+
+/* SOME MOBILEVIEW CSS */
+@media screen and (max-width: 850px) {
+.mobile{
+  display: none;
+}
 }
