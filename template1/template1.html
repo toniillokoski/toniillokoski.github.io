@@ -6,7 +6,7 @@
 
     <title>Mallisivu 1</title>
 
-    <link rel="stylesheet" type="text/css" href="/mallisivu1/mallisivu.css">
+    <link rel="stylesheet" type="text/css" href="/template1/template1.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </head>
 
@@ -26,7 +26,14 @@
         </div>
     </div>
 
+    <button class="toggleClass" onclick="toggleClass()"></button>
 
+    <script type="text/javascript">
+        function toggleClass() {
+            const body = document.querySelector('body');
+            body.classList.toggle('dark');
+        }
+    </script>
 </body>
 
 </html>

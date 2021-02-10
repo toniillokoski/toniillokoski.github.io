@@ -7,12 +7,13 @@
     box-sizing: border-box;
     font-family: Poppins, sans-serif;
 }
-
+/* LIGHT MODE */
 body {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    background: #eedede;
 }
 
 .info {
@@ -78,4 +79,34 @@ ul li:nth-child(3)::before {
 
 ul li:hover::before {
     height: 100%;
+}
+
+/* DARK MODE */
+
+body.dark {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #111213;
+}
+
+body.dark h1 {
+    text-align: center;
+    font-size: 6em;
+    color: #d8c9c9;
+}
+
+body.dark ul li a .fa {
+    font-size: 6em;
+    color: #d8c9c9;
+}
+
+.toggleClass {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    width: 60px;
+    height: 60px;
+    background: #543132;
 }
