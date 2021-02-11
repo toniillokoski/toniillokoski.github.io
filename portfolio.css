@@ -21,9 +21,6 @@ html, body{
 
 .section-4 {
     background-color: #063647;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 a {
@@ -133,12 +130,6 @@ a.nav-item:hover {
 
 }
 
-/* @media screen and (min-width: 768px) {
-    .nav-menu {
-        display: none;
-    }
-} */
-
 ul {
     display: block;
     margin: 0 auto;
@@ -162,6 +153,13 @@ li {
 }
 
 /* CONTACT FORM */
+
+.allcontact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 
 .feedback-input {
     color: #eeeded;
