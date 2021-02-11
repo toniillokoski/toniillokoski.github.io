@@ -21,6 +21,9 @@ html, body{
 
 .section-4 {
     background-color: #063647;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 a {
@@ -178,8 +181,8 @@ li {
 @media screen and (max-width: 900px) {
     #info {
         width: 80vw;
-        margin-left: 2rem;
-        margin-right: 2rem;
+        margin-left: 1vw;
+        margin-right: 1vw;
     }
 }
   
