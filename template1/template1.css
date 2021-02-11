@@ -13,7 +13,8 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: #eedede;
+    background: #f1f1f1;
+    transition: 0.3s ease-in-out;
 }
 
 .info {
@@ -26,7 +27,7 @@ body {
 h1 {
     text-align: center;
     font-size: 6em;
-    color: #222;
+    color: #212121;
 }
 
 ul {
@@ -47,7 +48,8 @@ ul li a {
 
 ul li a .fa {
     font-size: 6em;
-    color: #222;
+    color: #21212140;
+    background: none;
 }
 
 ul li::before {
@@ -88,7 +90,8 @@ body.dark {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: #111213;
+    background: #212121;
+    transition: 0.3s ease-in-out;
 }
 
 body.dark h1 {
@@ -99,14 +102,82 @@ body.dark h1 {
 
 body.dark ul li a .fa {
     font-size: 6em;
-    color: #d8c9c9;
+    color: #d8c9c942;
 }
 
 .toggleClass {
     position: absolute;
-    top: 50px;
-    right: 50px;
-    width: 60px;
-    height: 60px;
-    background: #543132;
+    top: 30px;
+    right: 400px;
+    width: 20px;
+    height: 20px;
+    font-size: 18px;
+    border-radius: 50%;
+    background: #212121;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.toggleClass::before {
+    position: absolute;
+    left: 25px;
+    content: 'Dark Mode';
+    white-space: nowrap;
+}
+
+body.dark .toggleClass {
+    background: #d8c9c9;
+    color: #d8c9c9;
+}
+
+body.dark .toggleClass::before {
+    content: 'Light Mode';
+}
+
+/* NAVBAR */
+
+#mainbox {
+    position: absolute;
+    top: 30px;
+    left: 400px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: all .6s;
+    color: #212121;
+}
+
+.sidemenu {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 0px;
+    background-color: #bbbbbb;
+    z-index: 1;
+    padding-top: 100px;
+    overflow-x: hidden;
+    transition: all .5s;
+}
+
+.sidemenu a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 2em;
+    color: #212121;
+    display: block;
+    text-align: center;
+    margin: 1em;
+}
+
+.sidemenu a:hover {
+     color: white;
+}
+
+.sidemenu .closebtn {
+    position: absolute;
+    top: -25px;
+    right: 30px;
+    font-size: 36px;
+    margin-left: 32px;
 }

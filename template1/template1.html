@@ -3,14 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Mallisivu 1</title>
-
     <link rel="stylesheet" type="text/css" href="/template1/template1.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </head>
 
 <body>
+    <!-- NAVBAR -->
+    <div id="mainbox" onclick="openFunction()">&#9776;</div>
+    <div id="menu" class="sidemenu">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <a href="#">Login</a>
+        <a href="#" class="closebtn" onclick="closeFunction()">&times;</a>
+   </div>
+
+   <script type="text/javascript">
+    function openFunction(){
+     document.getElementById("menu").style.width="500px";
+     document.getElementById("mainbox").style.marginLeft="400px";
+     document.getElementById("mainbox").innerHTML="";
+    }
+   function closeFunction(){
+    document.getElementById("menu").style.width="0px";
+    document.getElementById("mainbox").style.marginLeft="0px";
+    document.getElementById("mainbox").innerHTML="&#9776;";
+   }
+   </script>
 
     <!-- MAIN CONTENT -->
     <div class="info">
@@ -26,7 +46,7 @@
         </div>
     </div>
 
-    <button class="toggleClass" onclick="toggleClass()"></button>
+    <div class="toggleClass" onclick="toggleClass()"></div>
 
     <script type="text/javascript">
         function toggleClass() {
@@ -34,6 +54,6 @@
             body.classList.toggle('dark');
         }
     </script>
-</body>
 
+</body>
 </html>
