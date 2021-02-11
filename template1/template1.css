@@ -124,6 +124,7 @@ body.dark ul li a .fa {
     left: 25px;
     content: 'Dark Mode';
     white-space: nowrap;
+    font-size: 1em;
 }
 
 body.dark .toggleClass {
@@ -180,4 +181,20 @@ body.dark .toggleClass::before {
     right: 30px;
     font-size: 36px;
     margin-left: 32px;
+}
+
+body.dark #mainbox {
+    color: #d8c9c9;
+}
+
+body.dark .sidemenu {
+    background-color: #313131;
+}
+
+body.dark a {
+    color: #d8c9c9;
+}
+
+body.dark a:hover {
+    color: #9e9b9b;
 }
