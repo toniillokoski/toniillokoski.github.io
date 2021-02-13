@@ -23,6 +23,10 @@ html, body{
     background-color: #063647;
 }
 
+.section-5 {
+    background-color: #052D3D;
+}
+
 a {
   color: #00bbff;
 }
@@ -34,17 +38,17 @@ a:hover {
 h1 {
     text-align: center;
     font-weight: bold;
-    font-size: x-large;
+    font-size: 20px;
     padding-bottom: 1rem;
+    text-transform: uppercase;
 }
 
 section{
-	padding-top: 4rem;
-    padding-bottom: 4rem;
+    padding: 4em 2em;
 }
 
-.section-2 img {
-    height: 400px;
+h2 {
+    text-transform: uppercase;
 }
 
 a.nav-item {
@@ -76,6 +80,10 @@ a.nav-item:hover {
 	margin: 0 auto 1rem auto;
 	max-height: 512px;
 	max-width: 256px;
+}
+
+.project-figure2 {
+    margin: 1em 1em 1em 1em;
 }
 
 .project-text {
@@ -145,6 +153,7 @@ li {
     background: #e4e4ea;
     list-style: none;
     cursor: default;
+    border-radius: 5px;
 }
 
 #info {
